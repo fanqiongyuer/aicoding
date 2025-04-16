@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设计师作品集网站</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Designer</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#portfolio">作品集</a></li>
+                    <li><a href="#contact">联系我</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 首页Hero区域 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>创意设计 · 精彩呈现</h1>
+                <p>欢迎浏览我的设计作品集，这里展示了我在UI设计、平面设计和品牌设计方面的专业能力。</p>
+                <a href="#portfolio" class="primary-btn">查看作品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我部分 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>关于我</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://picsum.photos/id/177/600/600" alt="设计师照片">
+                </div>
+                <div class="about-text">
+                    <h3>创意设计师</h3>
+                    <p>我是一名专注于用户体验和视觉设计的创意设计师，拥有多年设计经验。我擅长将复杂的想法转化为直观、美观且功能完善的设计作品。</p>
+                    <p>我的设计理念是：简约而不简单，注重细节和用户体验。每一个项目都是独特的，需要量身定制的解决方案来满足客户的需求和目标。</p>
+                    <div class="skills">
+                        <div class="skill">
+                            <h4>UI设计</h4>
+                            <div class="skill-bar"><span style="width: 90%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <h4>平面设计</h4>
+                            <div class="skill-bar"><span style="width: 85%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <h4>品牌设计</h4>
+                            <div class="skill-bar"><span style="width: 80%"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集部分 -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>作品集</h2>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="ui">UI设计</button>
+                <button class="filter-btn" data-filter="graphic">平面设计</button>
+                <button class="filter-btn" data-filter="branding">品牌设计</button>
+            </div>
+            <div class="portfolio-grid" id="portfolio-items">
+                <!-- 作品项目将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我部分 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>联系我</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>邮箱</h3>
+                        <p>contact@designerportfolio.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>电话</h3>
+                        <p>+86 138 8888 8888</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>地址</h3>
+                        <p>上海市浦东新区张江高科技园区</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-weixin"></i>
+                        <h3>微信</h3>
+                        <p>designer_wechat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚部分 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2023 设计师作品集. 保留所有权利.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 作品详情弹窗 -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <div class="modal-images" id="modal-images"></div>
+                <p id="modal-description"></p>
+                <a href="#" id="modal-link" class="primary-btn" target="_blank">查看详情</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
